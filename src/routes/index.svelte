@@ -16,7 +16,7 @@
 		>
 			<div class="bg-slate-900/75 backdrop-blur-lg selection:bg-slate-50/20 p-16">
 				<h1 class="mb-8 text-6xl font-extrabold tracking-tight">
-					<span class="mr-6">👋</span><span
+					👋&ensp;<span
 						class="bg-clip-text bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-pink-500 text-transparent"
 						>Hello there!</span
 					>

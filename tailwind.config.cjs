@@ -1,7 +1,11 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {}
+		extend: {
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
+			}
+		}
 	},
-	plugins: []
+	plugins: [require('tailwindcss-hero-patterns')]
 };

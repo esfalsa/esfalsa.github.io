@@ -5,7 +5,7 @@
 </script>
 
 <section class="rounded-xl bg-slate-50 heropattern-plus-slate-100 shadow-sm">
-	<span {id} class="-top-24 relative" />
+	<span {id} class="-top-28 relative" />
 	<div
 		class="bg-gradient-radial from-slate-100 via-slate-100/25 to-transparent rounded-xl md:p-16 p-8 shadow-inner"
 	>

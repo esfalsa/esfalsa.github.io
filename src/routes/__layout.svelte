@@ -5,6 +5,6 @@
 
 <Navbar />
 
-<main class="mx-8 mt-24 mb-16">
+<main class="mx-8 mt-28 mb-16">
 	<slot />
 </main>

@@ -56,6 +56,21 @@
 			>
 		</p>
 	</Box>
+	<Box title="Purée" id="puree">
+		<p>
+			Purée is a simple website to find detags. Each day, it downloads and searches the daily
+			regions dump for regions that have been tagged and displays them in a list with the reasons
+			why the region has been flagged and estimated update times.
+		</p>
+		<p>
+			Purée uses GitHub Actions to download the daily dump each day and run a Python script to
+			search for tagged regions. The output is saved to a site built with Jekyll and deployed via
+			GitHub Pages.
+		</p>
+		<p>
+			<Link href="/puree" newtab rel="external">Open Purée</Link>
+		</p>
+	</Box>
 	<Box title="StreamKit" id="streamkit">
 		<p>
 			StreamKit is a simple website to format posts on <Link

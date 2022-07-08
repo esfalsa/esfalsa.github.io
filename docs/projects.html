@@ -13,14 +13,14 @@
 		<meta name="theme-color" content="#ffffff" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content=""><title>Pronoun | Projects</title>
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-917b0278.css">
-	<link rel="modulepreload" href="/_app/start-f9e3b070.js">
-	<link rel="modulepreload" href="/_app/chunks/index-d0ddca8c.js">
-	<link rel="modulepreload" href="/_app/chunks/index-11d6baac.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-b7390dce.js">
-	<link rel="modulepreload" href="/_app/chunks/link-a1fd244e.js">
-	<link rel="modulepreload" href="/_app/pages/projects.svelte-36e1153c.js">
-	<link rel="modulepreload" href="/_app/chunks/box-3cb468c6.js">
+	<link rel="stylesheet" href="/_app/immutable/assets/pages/__layout.svelte-b6a57216.css">
+	<link rel="modulepreload" href="/_app/immutable/start-23b4ebfb.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-099864ec.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-a4deadbe.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-b43ca408.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/link-1d503bd0.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/projects.svelte-b90ee6fb.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/box-97119ec7.js">
 	</head>
 	<body>
 		
@@ -31,6 +31,7 @@
   <nav class="bg-slate-800/80 backdrop-blur-2xl rounded-xl z-50 flex flex-row flex-wrap items-center content-center w-full p-4 text-white transition-all shadow-xl"><div><a sveltekit:prefetch href="/" target="" class="mr-12 text-xl font-bold text-center">Pronoun</a></div>
 		<div class="lg:flex flex-row items-center hidden space-x-6 text-xs font-semibold tracking-wide text-center uppercase"><a sveltekit:prefetch href="/about" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">About Me
 				</a><a sveltekit:prefetch href="/projects#applesauce" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">Applesauce
+				</a><a sveltekit:prefetch href="/projects#puree" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">Purée
 				</a><a sveltekit:prefetch href="/projects#spsf-data-portal" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">SPSF Data Portal
 				</a><a sveltekit:prefetch href="/projects#streamkit" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">StreamKit
 				</a><a sveltekit:prefetch href="/projects#spyglass-archive" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">Spyglass Archive
@@ -73,6 +74,17 @@
 			formatting it with BBCode, also allowed for user interaction to filter the available data.
 		</p>
 		<p><a sveltekit:prefetch href="https://docs.google.com/spreadsheets/d/1CeE0ERg8WpFCljIYEM3SjWKQjwv8gsyGcEuR9O1-YKE/edit" target="_blank" class="link">View the portal</a></p></div></div></section>
+	<section class="rounded-xl bg-slate-50 heropattern-plus-slate-100 shadow-sm"><span id="puree" class="-top-28 relative"></span>
+	<div class="bg-gradient-radial from-slate-100 via-slate-100/25 to-transparent rounded-xl md:p-16 p-8 shadow-inner"><h1 class="text-slate-900 mb-8 text-4xl font-extrabold tracking-tight">Purée</h1>
+		<div class="max-w-prose text-slate-700 space-y-4"><p>Purée is a simple website to find detags. Each day, it downloads and searches the daily
+			regions dump for regions that have been tagged and displays them in a list with the reasons
+			why the region has been flagged and estimated update times.
+		</p>
+		<p>Purée uses GitHub Actions to download the daily dump each day and run a Python script to
+			search for tagged regions. The output is saved to a site built with Jekyll and deployed via
+			GitHub Pages.
+		</p>
+		<p><a sveltekit:prefetch href="/puree" target="_blank" class="link" rel="external">Open Purée</a></p></div></div></section>
 	<section class="rounded-xl bg-slate-50 heropattern-plus-slate-100 shadow-sm"><span id="streamkit" class="-top-28 relative"></span>
 	<div class="bg-gradient-radial from-slate-100 via-slate-100/25 to-transparent rounded-xl md:p-16 p-8 shadow-inner"><h1 class="text-slate-900 mb-8 text-4xl font-extrabold tracking-tight">StreamKit</h1>
 		<div class="max-w-prose text-slate-700 space-y-4"><p>StreamKit is a simple website to format posts on <a sveltekit:prefetch href="https://tspforums.xyz/thread-2899.html" target="_blank" class="link">Stream</a>, a fictional social network in the modern-tech Pacifica roleplay canon on the South Pacific
@@ -95,10 +107,10 @@
 		</p></div></div></section></div></main>
 
 
-		<script type="module" data-hydrate="1ln0a13">
-		import { start } from "/_app/start-f9e3b070.js";
+		<script type="module" data-sveltekit-hydrate="qzbdvx">
+		import { start } from "/_app/immutable/start-23b4ebfb.js";
 		start({
-			target: document.querySelector('[data-hydrate="1ln0a13"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="qzbdvx"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -107,10 +119,7 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-b7390dce.js"),
-						import("/_app/pages/projects.svelte-36e1153c.js")
-				],
+				nodes: [0, 5],
 				params: {},
 				routeId: "projects"
 			}

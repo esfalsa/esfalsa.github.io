@@ -6,6 +6,7 @@
 	let links = [
 		{ title: 'About Me', href: '/about' },
 		{ title: 'Applesauce', href: '/projects#applesauce' },
+		{ title: 'Purée', href: '/projects#puree' },
 		{ title: 'SPSF Data Portal', href: '/projects#spsf-data-portal' },
 		{ title: 'StreamKit', href: '/projects#streamkit' },
 		{ title: 'Spyglass Archive', href: '/projects#spyglass-archive' },

@@ -1,7 +1,8 @@
 <script>
 	export let href;
 	export let newtab = false;
-	let className = 'link';
+	export let addClass = '';
+	let className = `link ${addClass}`;
 	export { className as class };
 	export let rel = null;
 </script>

@@ -36,6 +36,21 @@
 			<Link href="https://github.com/esfalsa/applesauce" newtab>View on GitHub</Link>
 		</p>
 	</Box>
+	<Box title="Purée" id="puree">
+		<p>
+			Purée is a simple website to find detags. Each day, it downloads and searches the daily
+			regions dump for regions that have been tagged and displays them in a list with the reasons
+			why the region has been flagged and estimated update times.
+		</p>
+		<p>
+			Purée uses GitHub Actions to download the daily dump each day and run a Python script to
+			search for tagged regions. The output is saved to a site built with Jekyll and deployed via
+			GitHub Pages.
+		</p>
+		<p>
+			<Link href="/puree" newtab rel="external">Open Purée</Link>
+		</p>
+	</Box>
 	<Box title="SPSF Data Portal" id="spsf-data-portal">
 		<p>
 			The SPSF Data Portal is a spreadsheet that offers a public database of, and statistics about,
@@ -54,21 +69,6 @@
 				href="https://docs.google.com/spreadsheets/d/1CeE0ERg8WpFCljIYEM3SjWKQjwv8gsyGcEuR9O1-YKE/edit"
 				newtab>View the portal</Link
 			>
-		</p>
-	</Box>
-	<Box title="Purée" id="puree">
-		<p>
-			Purée is a simple website to find detags. Each day, it downloads and searches the daily
-			regions dump for regions that have been tagged and displays them in a list with the reasons
-			why the region has been flagged and estimated update times.
-		</p>
-		<p>
-			Purée uses GitHub Actions to download the daily dump each day and run a Python script to
-			search for tagged regions. The output is saved to a site built with Jekyll and deployed via
-			GitHub Pages.
-		</p>
-		<p>
-			<Link href="/puree" newtab rel="external">Open Purée</Link>
 		</p>
 	</Box>
 	<Box title="StreamKit" id="streamkit">

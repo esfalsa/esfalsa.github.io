@@ -1,6 +1,7 @@
 <script>
 	export let title;
-	export let titleClass = 'text-slate-900 mb-8 text-4xl font-extrabold tracking-tight';
+	export let titleClass =
+		'text-slate-900 mb-8 text-4xl font-extrabold tracking-tight !leading-tight';
 	export let id = null;
 </script>
 

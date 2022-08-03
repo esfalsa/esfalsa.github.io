@@ -5,6 +5,7 @@
 
 	let links = [
 		{ title: 'About Me', href: '/about' },
+		{ title: 'Blog', href: '/blog' },
 		{ title: 'Applesauce', href: '/projects#applesauce' },
 		{ title: 'Purée', href: '/projects#puree' },
 		{ title: 'SPSF Data Portal', href: '/projects#spsf-data-portal' },
@@ -31,7 +32,7 @@
 			{#each links as { title, href, newtab }}
 				<Link
 					{href}
-					class="hover:text-slate-50 h-fit transition {path === href
+					class="hover:text-slate-50 h-fit transition {path.startsWith(href)
 						? 'text-slate-50'
 						: 'text-slate-300/75'}"
 					{newtab}
@@ -65,39 +66,30 @@
 				</svg>
 			{/if}
 		</MenuButton>
-		<div class="basis-full {open ? 'h-8 sm:h-12' : 'h-0'} transition-all" />
-		<!-- <Transition
-			enter="transition duration-100 ease-out"
-			enterFrom="transform scale-90 opacity-0"
-			enterTo="transform scale-100 opacity-100"
-			leave="transition duration-75 ease-out"
-			leaveFrom="transform scale-100 opacity-100"
-			leaveTo="transform scale-90 opacity-0"
-			class="w-full transition-all"
-		> -->
+		<div class="basis-full {open ? 'h-6' : 'h-0'} transition-all" />
 		<MenuItems
 			class="divide-slate-500 sm:divide-none flex flex-col w-full px-4 divide-y"
 			tabindex="-1"
 		>
 			<div>
-				<MenuItem class="sm:p-4 flex">
+				<MenuItem class="flex">
 					<Link
 						href="/"
 						class="{path === '/'
 							? 'text-gradient font-bold'
-							: 'text-slate-400 font-medium'} text-lg align-middle p-4 sm:p-0 w-full sm:w-fit"
+							: 'text-slate-400 font-medium'} text-lg align-middle py-2 w-full sm:w-fit"
 					>
 						Home
 					</Link>
 				</MenuItem>
 				{#each links as { title, href, newtab }}
-					<MenuItem class="sm:p-4 flex" let:active>
+					<MenuItem class="flex" let:active>
 						<Link
 							{href}
 							{newtab}
 							class="{path === href
 								? 'text-gradient font-bold'
-								: 'text-slate-400 font-medium'} text-lg align-middle p-4 sm:p-0 w-full sm:w-fit"
+								: 'text-slate-400 font-medium'} text-lg align-middle py-2 w-full sm:w-fit"
 						>
 							{title}
 						</Link>
@@ -105,6 +97,5 @@
 				{/each}
 			</div>
 		</MenuItems>
-		<!-- </Transition> -->
 	</Menu>
 </div>

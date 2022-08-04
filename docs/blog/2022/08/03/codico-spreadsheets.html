@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="../../../../apple-touch-icon.png" />
+		<link rel="icon" href="../../../../favicon.svg" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../../../favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../../../../favicon-16x16.png" />
+		<link rel="manifest" href="../../../../site.webmanifest" />
+		<link rel="mask-icon" href="../../../../safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-2360878f.css">
+	<link rel="modulepreload" href="/_app/immutable/start-c7e92884.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-042c205f.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-89fac7e4.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-7f3e3a04.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/link-4f7a5115.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/blog/2022/08/03/codico-spreadsheets.md-95865aa9.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/_post-53d9098c.js">
+	</head>
+	<body>
+		
+
+
+<div class="fixed top-0 z-50 w-full p-4">
+
+  <nav class="bg-slate-800/80 backdrop-blur-2xl rounded-xl z-50 flex flex-row flex-wrap items-center content-center w-full p-4 text-white transition-all shadow-xl"><div><a sveltekit:prefetch href="/" target="" class="mr-12 text-xl font-bold text-center">Pronoun</a></div>
+		<div class="lg:flex flex-row items-center hidden space-x-6 text-xs font-semibold tracking-wide text-center uppercase"><a sveltekit:prefetch href="/about" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">About Me
+				</a><a sveltekit:prefetch href="/blog" target="" class="hover:text-slate-50 h-fit transition text-slate-50">Blog
+				</a><a sveltekit:prefetch href="/projects#applesauce" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">Applesauce
+				</a><a sveltekit:prefetch href="/projects#puree" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">Purée
+				</a><a sveltekit:prefetch href="/projects#spsf-data-portal" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">SPSF Data Portal
+				</a><a sveltekit:prefetch href="/projects#streamkit" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">StreamKit
+				</a><a sveltekit:prefetch href="/projects#spyglass-archive" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">Spyglass Archive
+				</a><a sveltekit:prefetch href="/contact" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">Contact
+				</a></div>
+		
+  <button id="headlessui-menu-button-13" type="button" aria-haspopup aria-expanded="false" class="lg:hidden block ml-auto"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+		<div class="basis-full h-0 transition-all"></div>
+		</nav></div>
+
+<main class="mx-8 mt-28 mb-16"><div class="max-w-5xl mx-auto space-y-8 pt-8"><a sveltekit:prefetch href="/blog" target="" class="link ">← All blog posts</a>
+	<article class="prose prose-slate pt-8"><h1>Codico DevBlog: Spreadsheets?</h1>
+		<p class="lead">August 3, 2022 at 10:02 PM</p>
+
+		<p>For the past few days, I’ve been working on a new project called <a href="https://github.com/esfalsa/codico" rel="nofollow">Codico</a>. My goal is to create a simple way to write and publish dispatches, and keep them all up to date with any new content changes. But today, that led me to a strange place: making a spreadsheet template.</p>
+<p>Having users store information for their dispatches in their own Google Sheets might seem like a cop-out replacement for implementing an actual accounts system and database — and it is, to be honest. But it’s just so <em>easy</em>. Google Sheets covers a lot of fancy features. Version history? Controlling edit access? Live collaborative editing? All covered by Google Sheets.</p>
+<p>It also neatly avoids any concerns about having to pay for hosting or cloud services. It’s not that I’m particularly averse to spending money on this project, but I have a long-running pledge to myself not to spend any money on games. It was made with mobile game in-app purchases in mind, but NationStates counts too. We’ll see how long that part lasts though. I also considered building an editing experience within the web app, but it was never going to be as feature-rich as Google Sheets. In particular, I could write content to the file system for individual users, but no hosted database would mean users would have to manually export and import their content to share with others working on the same dispatches.</p>
+<p>Unfortunately, the Google Sheets API seemed really clunky to use. Fortunately, I’d stumbled upon this cool project a while back called <a href="https://github.com/benborgers/opensheet#readme" rel="nofollow">opensheet</a> that offers an easy-to-use JSON API for Google Sheets. It does require spreadsheets to be viewable by anyone with the link, but considering the dispatches are all public anyway, leaving the raw templates behind those dispatches publicly viewable shouldn’t be a huge problem.</p>
+<p>From there, it was just a matter of pulling data from opensheet and displaying it (<a href="https://swr.vercel.app/" rel="nofollow">SWR</a> is awesome, by the way). I say it was “just a matter of” pulling the data, but of course I had to pull something stupid in the middle. Apparently, I managed to edit the TypeScript types declaration exported by the SWR library when using VSCode’s ‘rename symbol’ feature, and then spent a solid half hour trying to figure out why I was getting a TypeScript error. Oh well.</p>
+<p>Anyway, eventually I got it working.</p>
+<p><img src="/images/blog/codico-basic-spreadsheet-view.png" alt="Codico with data pulled from a spreadsheet"></p>
+<p>It’s still a barebones site, but at least the Google Sheets import is working. And most importantly, it already comes with dark mode. Ideally, my goal for tomorrow is finish the code that actually turns dispatch templates into ready-to-post BBcode, but we’ll see how far I actually get.</p></article></div></main>
+
+
+		<script type="module" data-sveltekit-hydrate="wxcq0y">
+		import { set_public_env, start } from "/_app/immutable/start-c7e92884.js";
+
+		set_public_env({});
+
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="wxcq0y"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 4],
+				params: {},
+				routeId: "blog/2022/08/03/codico-spreadsheets"
+			}
+		});
+	</script>
+	</body>
+</html>

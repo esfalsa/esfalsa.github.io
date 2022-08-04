@@ -1,4 +1,4 @@
-import{S as k,i as J,s as N,a as v,l as u,w as M,a5 as B,h as a,c as _,m as p,n as h,x as D,p as C,b as f,y as F,f as q,t as H,B as R,r as y,u as b,a2 as I,E as z}from"../chunks/index-80e18943.js";import{B as V}from"../chunks/box-546fad9c.js";function j(P){let o,l,n,r,e,m,i,S,w,c,x,g,d,$;return{c(){o=u("p"),l=y(`Hi! I\u2019m Pronoun (also known as Esfalsa on NationStates). I first discovered NationStates in
+import{S as k,i as J,s as N,a as v,l as u,w as M,a5 as B,h as a,c as _,m as p,n as h,x as D,p as C,b as f,y as F,f as q,t as H,B as R,r as y,u as b,a2 as I,E as z}from"../chunks/index-042c205f.js";import{B as V}from"../chunks/box-f981f496.js";function j(P){let o,l,n,r,e,m,i,S,w,c,x,g,d,$;return{c(){o=u("p"),l=y(`Hi! I\u2019m Pronoun (also known as Esfalsa on NationStates). I first discovered NationStates in
 			2014 and have been playing on and off ever since then. During that time, I\u2019ve always
 			considered the South Pacific to be my home, and it\u2019s where my current nation has resided since
 			I founded it in 2015.`),n=v(),r=u("p"),e=y(`In TSP, I\u2019m a legislator and thus a member of the Assembly. I\u2019ve been a legislator since

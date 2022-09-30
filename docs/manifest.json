@@ -4,7 +4,7 @@
     "src": "src/assets/gradient.png"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-c7e92884.js",
+    "file": "_app/immutable/start-bdcec7bc.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -17,6 +17,8 @@
       "src/routes/about.svelte",
       "src/routes/blog/2022/08/02/my-first-post.md",
       "src/routes/blog/2022/08/03/codico-spreadsheets.md",
+      "src/routes/blog/2022/08/06/codico-open-alpha.md",
+      "src/routes/blog/2022/09/29/vinta-starting-out.md",
       "src/routes/blog/index.svelte",
       "src/routes/contact.svelte",
       "src/routes/index.svelte",
@@ -70,6 +72,28 @@
   "src/routes/blog/2022/08/03/codico-spreadsheets.md": {
     "file": "_app/immutable/pages/blog/2022/08/03/codico-spreadsheets.md-95865aa9.js",
     "src": "src/routes/blog/2022/08/03/codico-spreadsheets.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-042c205f.js",
+      "__post-53d9098c.js",
+      "_link-4f7a5115.js"
+    ]
+  },
+  "src/routes/blog/2022/08/06/codico-open-alpha.md": {
+    "file": "_app/immutable/pages/blog/2022/08/06/codico-open-alpha.md-cc0f5a30.js",
+    "src": "src/routes/blog/2022/08/06/codico-open-alpha.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-042c205f.js",
+      "__post-53d9098c.js",
+      "_link-4f7a5115.js"
+    ]
+  },
+  "src/routes/blog/2022/09/29/vinta-starting-out.md": {
+    "file": "_app/immutable/pages/blog/2022/09/29/vinta-starting-out.md-78cd7f82.js",
+    "src": "src/routes/blog/2022/09/29/vinta-starting-out.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [

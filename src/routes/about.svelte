@@ -24,19 +24,19 @@
 		</p>
 		<p>
 			I’m also a member of the South Pacific Special Forces, holding the rank of Officer since April
-			1, 2022. Additionally, I’m also currently serving as the Minister of Defense. Previously, I
-			was a Trainee from January 11 to 28, 2022, and a Soldier from January 28 to April 1, 2022.
+			1, 2022. Previously, I was a Trainee from January 11 to 28, 2022, and a Soldier from January
+			28 to April 1, 2022, in addition to serving as Minister of Defense from April 9, 2022 to
+			October 16, 2022.
 		</p>
 		<p>
-			In addition to gameplay, I roleplay as Esfalsa and (occasionally) the Central Bailtemmic
-			Republic in the modern-tech Pacifica canon on the TSP forums. Outside of my own roleplay, I’m
-			also a map editor for the regional map and contribute to articles on TSPedia, the regional
-			wiki.
+			In addition to gameplay, I roleplay as Esfalsa and the Central Bailtemmic Republic in the
+			modern-tech Pacifica canon on the TSP forums. Outside of my own roleplay, I’m also a map
+			editor for the regional map and contribute to articles on TSPedia, the regional wiki.
 		</p>
 		<p>
-			Outside of NationStates, I’m a 17-year-old high school student (albeit one heading to college
-			in a few months) with an interest in politics. In my free time, you’ll often find me listening
-			to podcasts or playing a little too much Tetris for my own good.
+			Outside of NationStates, I’m a college freshman with an interest in politics and computer
+			science. In my free time, you’ll often find me programming, listening to podcasts, or playing
+			a little too much Tetris for my own good.
 		</p>
 	</Box>
 </div>

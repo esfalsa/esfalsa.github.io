@@ -23,10 +23,10 @@
 			February 2018, and October 2018 to March 2020.
 		</p>
 		<p>
-			I’m also a member of the South Pacific Special Forces, holding the rank of Officer since April
-			1, 2022. Previously, I was a Trainee from January 11 to 28, 2022, and a Soldier from January
-			28 to April 1, 2022, in addition to serving as Minister of Defense from April 9, 2022 to
-			October 16, 2022.
+			I’m also a member of the South Pacific Special Forces, holding the rank of Commander since
+			November 12, 2022. Previously, I was a Trainee from January 11 to 28, 2022, a Soldier from
+			January 28 to April 1, 2022, and an Officer from April 1, 2022 to November 12, 2022.
+			Additionally, I served as Minister of Defense from April 9, 2022 to October 16, 2022.
 		</p>
 		<p>
 			In addition to gameplay, I roleplay as Esfalsa and the Central Bailtemmic Republic in the

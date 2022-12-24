@@ -18,7 +18,7 @@
 			text: 'Pronoun',
 			component: Link,
 			props: {
-				href: 'https://tspforums.xyz/user-554.html',
+				href: 'https://thesouthpacific.org/u/pronoun',
 				newtab: true
 			}
 		},
@@ -27,7 +27,7 @@
 			text: 'Pronoun',
 			component: Link,
 			props: {
-				href: 'https://wiki.tspforums.xyz/wiki/User:Pronoun',
+				href: 'https://wiki.thesouthpacific.org/User:Pronoun',
 				newtab: true
 			}
 		},

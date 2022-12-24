@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="../../../../apple-touch-icon.png" />
+		<link rel="icon" href="../../../../favicon.svg" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../../../favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../../../../favicon-16x16.png" />
+		<link rel="manifest" href="../../../../site.webmanifest" />
+		<link rel="mask-icon" href="../../../../safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-2360878f.css">
+	<link rel="modulepreload" href="/_app/immutable/start-98faf78d.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-042c205f.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-89fac7e4.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-7f3e3a04.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/link-4f7a5115.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/blog/2022/12/24/starting-region-archiver.md-5d34a15d.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/_post-53d9098c.js">
+	</head>
+	<body>
+		
+
+
+<div class="fixed top-0 z-50 w-full p-4">
+
+  <nav class="bg-slate-800/80 backdrop-blur-2xl rounded-xl z-50 flex flex-row flex-wrap items-center content-center w-full p-4 text-white transition-all shadow-xl"><div><a sveltekit:prefetch href="/" target="" class="mr-12 text-xl font-bold text-center">Pronoun</a></div>
+		<div class="lg:flex flex-row items-center hidden space-x-6 text-xs font-semibold tracking-wide text-center uppercase"><a sveltekit:prefetch href="/about" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">About Me
+				</a><a sveltekit:prefetch href="/blog" target="" class="hover:text-slate-50 h-fit transition text-slate-50">Blog
+				</a><a sveltekit:prefetch href="/projects#applesauce" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">Applesauce
+				</a><a sveltekit:prefetch href="/projects#puree" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">Purée
+				</a><a sveltekit:prefetch href="/projects#spsf-data-portal" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">SPSF Data Portal
+				</a><a sveltekit:prefetch href="/projects#streamkit" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">StreamKit
+				</a><a sveltekit:prefetch href="/projects#spyglass-archive" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">Spyglass Archive
+				</a><a sveltekit:prefetch href="/contact" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">Contact
+				</a></div>
+		
+  <button id="headlessui-menu-button-19" type="button" aria-haspopup aria-expanded="false" class="lg:hidden block ml-auto"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+		<div class="basis-full h-0 transition-all"></div>
+		</nav></div>
+
+<main class="mx-8 mt-28 mb-16"><div class="max-w-5xl mx-auto space-y-8 pt-8"><a sveltekit:prefetch href="/blog" target="" class="link ">← All blog posts</a>
+	<article class="prose prose-slate pt-8"><h1>DevBlog: A New Region Archiver?</h1>
+		<p class="lead">Invalid Date</p>
+
+		<p>So. It’s been a while.</p>
+<p>Recently, I’ve been working on a new region archival utility.</p>
+<p>When (or rather, if) I finish this project, it certainly won’t be the first. I love <a href="https://eyebeast.calref.network/" rel="nofollow">Eyebeast</a> and it’s already my go-to tool for detagging; in fact, it’s a major inspiration for this project. It’s also possible that something like <a href="https://github.com/hierocles/conductor" rel="nofollow">Conductor</a> will be up and running by the time I finish my yet-to-be-named archival utility. Why, then, make my own? Well, long story short, I’m lazy.</p>
+<p>Detagging right now, despite all the tools for it, is still a fair bit of work. Going through regions at update isn’t all that bad — it’s probably possible, with a target list set before update, to automate it all to spamming a single keybind — but actually detagging regions is still a bit much for my incredibly short attention span. It still requires searching up a region and manually copy-pasting information or clicking buttons. The horror!</p>
+<p>In the long run, my goal is to create a tool that can reduce detagging to the same monotonous act of spamming a single keybind. The basic setup I have in mind is something like:</p>
+<ol><li>a browser extension that fetches data and sends it to NationStates on user input,</li>
+<li>an API that archived region data, and</li>
+<li>a script that parses daily dumps and updates the data stored in the API.</li></ol>
+<p>I’m still in the early stages of this project. I have a data dump parser set up, but I need to start working on actually saving that data. The performance also isn’t great. It takes around 30 seconds on my computer to go through the daily dump even with a SAX parser, which is apparently slower than just dumping the full text of the daily dump into an XML parser and converting it into a giant JavaScript object, so my code must <em>really</em> not be optimized well. The important thing is that it works…</p>
+<p>In any case, 30 seconds isn’t all that much compared to the lengths of time this script will eventually need to run for. As far as I can tell, requests for regional flags and banners count as requests to the HTML site, so the rate limit for automated requets is ten requests per minute. With around 16,000 regional flags and 5,300 custom banners, that works out to over 35 hours. Things will get better after the first run, since if the flag or banner hasn’t changed it doens’t need to be archived again, but I’ll probably only archive regions with executive delegates or something.</p></article></div></main>
+
+
+		<script type="module" data-sveltekit-hydrate="1er9htt">
+		import { set_public_env, start } from "/_app/immutable/start-98faf78d.js";
+
+		set_public_env({});
+
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="1er9htt"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 7],
+				params: {},
+				routeId: "blog/2022/12/24/starting-region-archiver"
+			}
+		});
+	</script>
+	</body>
+</html>

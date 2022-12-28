@@ -4,7 +4,7 @@
     "src": "src/assets/gradient.png"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-98faf78d.js",
+    "file": "_app/immutable/start-9617256d.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -20,6 +20,7 @@
       "src/routes/blog/2022/08/06/codico-open-alpha.md",
       "src/routes/blog/2022/09/29/vinta-starting-out.md",
       "src/routes/blog/2022/12/24/starting-region-archiver.md",
+      "src/routes/blog/2022/12/27/region-archiver-perfectionism.md",
       "src/routes/blog/index.svelte",
       "src/routes/contact.svelte",
       "src/routes/index.svelte",
@@ -104,8 +105,19 @@
     ]
   },
   "src/routes/blog/2022/12/24/starting-region-archiver.md": {
-    "file": "_app/immutable/pages/blog/2022/12/24/starting-region-archiver.md-5d34a15d.js",
+    "file": "_app/immutable/pages/blog/2022/12/24/starting-region-archiver.md-a267be9d.js",
     "src": "src/routes/blog/2022/12/24/starting-region-archiver.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-042c205f.js",
+      "__post-53d9098c.js",
+      "_link-4f7a5115.js"
+    ]
+  },
+  "src/routes/blog/2022/12/27/region-archiver-perfectionism.md": {
+    "file": "_app/immutable/pages/blog/2022/12/27/region-archiver-perfectionism.md-2f62fcff.js",
+    "src": "src/routes/blog/2022/12/27/region-archiver-perfectionism.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [

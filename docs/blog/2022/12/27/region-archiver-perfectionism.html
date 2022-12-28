@@ -19,7 +19,7 @@
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-89fac7e4.js">
 	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-7f3e3a04.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/link-4f7a5115.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/blog/2022/08/02/my-first-post.md-8d2f463e.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/blog/2022/12/27/region-archiver-perfectionism.md-2f62fcff.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/_post-53d9098c.js">
 	</head>
 	<body>
@@ -39,30 +39,27 @@
 				</a><a sveltekit:prefetch href="/contact" target="" class="hover:text-slate-50 h-fit transition text-slate-300/75">Contact
 				</a></div>
 		
-  <button id="headlessui-menu-button-11" type="button" aria-haspopup aria-expanded="false" class="lg:hidden block ml-auto"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+  <button id="headlessui-menu-button-21" type="button" aria-haspopup aria-expanded="false" class="lg:hidden block ml-auto"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
 		<div class="basis-full h-0 transition-all"></div>
 		</nav></div>
 
 <main class="mx-8 mt-28 mb-16"><div class="max-w-5xl mx-auto space-y-8 pt-8"><a sveltekit:prefetch href="/blog" target="" class="link ">← All blog posts</a>
-	<article class="prose prose-slate pt-8"><h1>My First Post</h1>
-		<p class="lead">August 2, 2022 at 7:28 PM</p>
+	<article class="prose prose-slate pt-8"><h1>Region Archiver DevBlog: Well… It’s Working</h1>
+		<p class="lead">December 27, 2022 at 10:19 PM</p>
 
-		<p>Today, I’m writing my first blog post. And with some luck, someone may actually read it.</p>
-<p>I wasn’t planning to start my blog with an introductory post, but rather by starting a journal of my progress with <a href="https://github.com/esfalsa/codico" rel="nofollow">another project</a>. I still <em>am</em> working on that, but suffice it to say that progress is a little slower than I predicted. That’s not to mention the fact I thought to myself, “I’ll totally just also set up a blog on my website and write up everything I’ve been working on today, no problem” — and somehow thought that would all just work out.</p>
-<p>So instead, here we are. Truth be told, I’m not actually sure what I’ll be writing about on this blog, but I’ll figure something out (or plan to, anyway). My record when trying to start a blog in real life was one entire post before I lost interest, so hopefully I can beat that one at least. Beyond that, who knows?</p>
-<p>In any case, since I was originally planning to record a journal of my programming efforts today, here goes: today, I set up my blog. (But you knew that part already.)</p>
-<p>This site is built with <a href="https://svelte.dev/" rel="nofollow">Svelte</a> and <a href="https://kit.svelte.dev/" rel="nofollow">SvelteKit</a>, so to add a bit of a nicer writing experience, I added <a href="https://mdsvex.com/" rel="nofollow">MDsveX</a> on top of that. Oh, and there’s a <a href="/blog">list of all blog posts</a>, currently just one item long, of course. Groundbreaking stuff, I know. But that’s pretty much the entire gist of it.</p>
-<p>It’s pretty simple, but it works, so I’m pretty happy with it for now. I’ll probably add an actual date utility library at some point, so I don’t need to keep tying out timestamps for blog posts in ISO 8601 format, but I’m not overly bothered right now. On the bright side, keeping things simple means the ratio of time spent between setting up the blog and actually blogging isn’t too shabby.</p>
-<p>With that said, hopefully I’ll have some more meaningful progress to journal about tomorrow.</p></article></div></main>
+		<p>It’s been another few days and in that time I’ve made some more progress with my region archiver script. My code actually works now!</p>
+<p>I’ve achieved a pretty sweet performance improvement too, cutting the time to parse a daily dump from around 30 seconds to around 5. The secret trick? My internet speeds magically improved, and I have no idea why. Apparently, I forgot that I was downloading an archived data dump with my SAX parsing script, and that was the limiting factor rather than my parsing logic.</p>
+<p>That doesn’t mean my parsing logic is good, though. It’s true that the script right now mostly works, but I still need to test the flag and banner downloads — NationStates just came back online after <a href="https://www.nationstates.net/page=news/2022/12/27/index.html" rel="nofollow">going down for the past few days</a>. A bigger problem is that I’m also generating a dump of all archived data by loading the entire dump into memory, updating it, and then dumping it back into its file. It somehow works, but doesn’t feel sustainable. I’m leaning towards dropping the dump entirely, since if I ever do need it I could probably just read and concactenate each individual region file, but we’ll see.</p>
+<p>After some light testing, I’m also beginning to think a simple frontend may be worth it after all. My original plan was just to serve the data for each region as static JSON files through GitHub pages, but build times in the ballpark of a minute (with <a href="https://astro.build/" rel="nofollow">Astro</a>, i.e., using <a href="https://vitejs.dev/" rel="nofollow">Vite</a> under the hood) mean it might not be so bad after all.</p></article></div></main>
 
 
-		<script type="module" data-sveltekit-hydrate="fjw6co">
+		<script type="module" data-sveltekit-hydrate="1uenmzz">
 		import { set_public_env, start } from "/_app/immutable/start-9617256d.js";
 
 		set_public_env({});
 
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="fjw6co"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1uenmzz"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -71,9 +68,9 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 3],
+				nodes: [0, 8],
 				params: {},
-				routeId: "blog/2022/08/02/my-first-post"
+				routeId: "blog/2022/12/27/region-archiver-perfectionism"
 			}
 		});
 	</script>

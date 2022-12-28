@@ -1,6 +1,6 @@
 ---
 title: 'DevBlog: A New Region Archiver?'
-datetime: 2022-12-12:45:15-0800
+datetime: 2022-12-24T12:45:15-0800
 ---
 
 So. It's been a while.

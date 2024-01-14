@@ -1,0 +1,54 @@
+---
+import Logo from "./Logo.astro";
+
+const navLinks = [
+	{
+		name: "man",
+		href: "/man",
+	},
+	{
+		name: "code",
+		href: "/code",
+	},
+	{
+		name: "posts",
+		href: "/posts",
+	},
+];
+
+const active = Astro.url.pathname;
+---
+
+<div class="sticky top-0 mb-16 w-full">
+	<div class="bg-gray-950 px-8">
+		<nav class="mx-auto flex max-w-prose flex-row justify-between py-4">
+			<div>
+				<a href="/">
+					<span class="sr-only">Home</span>
+					<Logo class="h-6 w-6" />
+				</a>
+			</div>
+			<div class="space-x-4">
+				{
+					navLinks.map(({ href, name }) => (
+						<a
+							href={href}
+							class:list={[
+								active === href ?
+									"text-brand-400 hover:text-brand-100"
+								:	"text-gray-300 hover:text-gray-50",
+								"rounded-lg transition",
+							]}
+						>
+							{name}
+						</a>
+					))
+				}
+			</div>
+		</nav>
+	</div>
+	<div
+		class="h-0 after:block after:h-6 after:w-full after:bg-gradient-to-b after:from-gray-950 after:to-transparent after:content-['']"
+	>
+	</div>
+</div>

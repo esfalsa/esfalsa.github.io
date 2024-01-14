@@ -1,16 +1,70 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/Logo.astro";
+import IndexSection from "../components/IndexSection.astro";
+import Link from "../components/Link.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<div
+		class="-mx-4 my-36 rounded-2xl bg-gradient-to-br from-brand-500 via-violet-500 to-fuchsia-700 p-px shadow-2xl shadow-brand-800"
+	>
+		<div class="rounded-2xl bg-gray-950 py-12">
+			<div
+				class="mx-auto mb-8 aspect-square h-36 w-36 rounded-2xl bg-brand-900 p-8 shadow-inner"
+			>
+				<Logo class="h-full w-full" />
+			</div>
+			<h1 class="mt-4 text-center text-5xl font-bold">
+				Hello, I’m <span
+					class="bg-gradient-to-bl from-brand-200 to-brand-500 bg-clip-text text-transparent"
+					>Pronoun</span
+				>.
+			</h1>
+		</div>
+	</div>
+	<IndexSection
+		subtitle="About Me"
+		title={{ name: "man", href: "/man", postfix: " pronoun" }}
+	>
+		<p>
+			I’m Pronoun, though you may also know me as Esfalsa on NationStates. I’ve
+			been playing NationStates on and off since September 2014, and have called
+			the South Pacific as my home throughout that time.
+		</p>
+		<p>
+			<Link href="/man">More →</Link>
+		</p>
+	</IndexSection>
+	<IndexSection
+		subtitle="My Projects"
+		title={{
+			name: "code",
+			prefix: "find ~/",
+			postfix: " -maxdepth 1 -type d",
+			href: "/code",
+		}}
+	>
+		<p>
+			In my free time, I also like to make tools here and there that improve my
+			NationStates experience. Most projects are related to military gameplay,
+			but I’ve also worked on some related to dispatches and roleplay.
+		</p>
+		<p>
+			<Link href="/code">More →</Link>
+		</p>
+	</IndexSection>
+	<IndexSection
+		subtitle="My Blog"
+		title={{ name: "posts", href: "/posts", prefix: "ls ~/" }}
+	>
+		<p>
+			Sometimes (very occasionally), I record some of my musings, journals, and
+			other thoughts in my blog. Most posts are related to my code projects, but
+			I sometimes also write about other things that interest me.
+		</p>
+		<p>
+			<Link href="/posts">More →</Link>
+		</p>
+	</IndexSection>
+</Layout>

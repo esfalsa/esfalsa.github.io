@@ -4,5 +4,12 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()]
+	site: "https://esfalsa.github.io",
+	redirects: {
+		"/about": "/man",
+		"/projects": "/code",
+		"/blog": "/posts",
+		"/contact": "/man",
+	},
+	integrations: [tailwind()],
 });

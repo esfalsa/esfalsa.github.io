@@ -17,7 +17,11 @@ const sha = execSync("git rev-parse HEAD", {
 	<div class="mx-auto max-w-prose">
 		<hr class="-mx-4 border-t border-t-gray-800" />
 		<div class="flex flex-row items-center pb-24 pt-16">
-			<div class="flex-1 text-left text-xl font-medium">Pronoun</div>
+			<div
+				class="flex-1 text-left font-handwriting text-2xl font-medium text-brand-200"
+			>
+				Pronoun
+			</div>
 			<div class="flex-1 text-right text-sm">
 				updated <Link
 					href={`https://github.com/esfalsa/esfalsa.github.io/commit/${sha}`}

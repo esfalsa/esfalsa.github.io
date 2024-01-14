@@ -11,6 +11,12 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.1.2)(tailwindcss@3.4.1)
+  '@fontsource-variable/public-sans':
+    specifier: ^5.0.17
+    version: 5.0.17
+  '@fontsource/kaushan-script':
+    specifier: ^5.0.18
+    version: 5.0.18
   astro:
     specifier: ^4.1.2
     version: 4.1.2(@types/node@20.11.0)(typescript@5.3.3)
@@ -677,6 +683,14 @@ packages:
     resolution: {integrity: sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fontsource-variable/public-sans@5.0.17:
+    resolution: {integrity: sha512-7aS7TZ3z8TacLedI4NvzlI4OqkTuxRS1pgOY6d1vvcy6PcEU8Gpz7Gy2unQJoz/ZTdCZY21mAvsDXdDoYOMrbg==}
+    dev: false
+
+  /@fontsource/kaushan-script@5.0.18:
+    resolution: {integrity: sha512-TMorUNI3ogObqHhAmztt2eB+9iN6p50xM+k08qhkhWy+DwBhAQZzBsah2OrPVCSctOB5wViuzmift4sVlUHfsA==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}

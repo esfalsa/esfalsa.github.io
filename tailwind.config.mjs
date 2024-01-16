@@ -1,4 +1,5 @@
 import defaultTheme from "tailwindcss/defaultTheme";
+import typographyPlugin from "@tailwindcss/typography";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -23,7 +24,14 @@ export default {
 					900: "#111330",
 				},
 			},
+			typography: ({ theme }) => ({
+				DEFAULT: {
+					css: {
+						"--tw-prose-invert-headings": theme("colors.brand.400"),
+					},
+				},
+			}),
 		},
 	},
-	plugins: [],
+	plugins: [typographyPlugin],
 };

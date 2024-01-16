@@ -1,0 +1,149 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
+import DateTime from "../components/DateTime.astro";
+---
+
+<Layout>
+	<article class="prose prose-invert">
+		<div class="not-prose flex flex-row flex-wrap justify-between">
+			<div>PRONOUN(7)</div>
+			<div>Miscellaneous Information Manual</div>
+			<div class="hidden sm:block">PRONOUN(7)</div>
+		</div>
+		<section>
+			<h2>Name</h2>
+			<p>
+				<strong>Pronoun</strong> — South Pacifican, coder, gameplayer, roleplayer
+			</p>
+		</section>
+		<section>
+			<h2>Synopsis</h2>
+			<p>
+				<div
+					class="not-prose -mx-4 rounded-2xl border border-gray-800 bg-gradient-to-br from-brand-500 via-violet-500 to-fuchsia-700 p-px shadow-lg shadow-brand-800"
+				>
+					<div class="rounded-[calc(1rem-2px)] bg-gray-950 p-2">
+						<div
+							class="grid grid-cols-[auto,minmax(0,1fr)] grid-rows-3 items-center"
+						>
+							<div
+								class="col-start-1 row-span-4 row-start-1 self-stretch rounded-lg border border-gray-700 bg-gradient-to-bl from-gray-800/60 to-gray-900/60"
+							>
+							</div>
+							<div
+								class="col-start-1 row-start-1 mx-px border-b border-gray-800 px-4 py-2 text-right font-semibold"
+							>
+								Pronouns
+							</div>
+							<div
+								class="col-start-2 row-start-1 border-b border-dotted border-gray-800 py-2 pl-4"
+							>
+								he/him
+							</div>
+							<div
+								class="col-start-1 row-start-2 mx-px border-b border-gray-800 px-4 py-2 text-right font-semibold"
+							>
+								NationStates
+							</div>
+							<div
+								class="col-start-2 row-start-2 border-b border-dotted border-gray-800 py-2 pl-4"
+							>
+								<Link href="https://www.nationstates.net/nation=esfalsa">
+									Esfalsa
+								</Link>
+							</div>
+							<div
+								class="col-start-1 row-start-3 mx-px border-b border-gray-800 px-4 py-2 text-right font-semibold"
+							>
+								The South Pacific
+							</div>
+							<div
+								class="col-start-2 row-start-3 border-b border-dotted border-gray-800 py-2 pl-4"
+							>
+								<Link href="https://thesouthpacific.org/u/pronoun">
+									Pronoun
+								</Link>
+							</div>
+							<div
+								class="col-start-1 row-start-4 mx-px px-4 py-2 text-right font-semibold"
+							>
+								GitHub
+							</div>
+							<div class="col-start-2 row-start-4 py-2 pl-4">
+								<Link href="https://github.com/esfalsa">esfalsa</Link>
+							</div>
+						</div>
+					</div>
+				</div>
+			</p>
+		</section>
+		<section>
+			<h2>Description</h2>
+			<p>
+				I’m Pronoun, also known as Esfalsa on NationStates. I’m a gameplayer and
+				roleplayer from the South Pacific. I’ve been playing NationStates since
+				I first discovered it back in 2014, with some interruptions in between.
+			</p>
+			<h3>Gameplay</h3>
+			<p>
+				I’ve held various positions in the South Pacific, including the
+				following. In the South Pacific, I’m active as a citizen and legislator,
+				but hold or have held executive, judicial, and military roles as well.
+			</p>
+			<p>
+				<dl>
+					<dt>Citizen</dt>
+					<dd><DateTime date="2023-10-02" /> to present.</dd>
+
+					<dt>Legislator</dt>
+					<dd>
+						<DateTime date="2023-10-03" /> to present. Previously a legislator from
+						<DateTime date="2016-01-09" /> to <DateTime date="2016-07-28" />,
+						<DateTime date="2016-11-21" /> to <DateTime date="2018-02-03" />,
+						and
+						<DateTime date="2018-10-12" /> to <DateTime date="2020-03-03" />.
+					</dd>
+
+					<dt>Citizenship Committee member</dt>
+					<dd>
+						<DateTime date="2023-10-02" /> to present. Previously a Legislator Committee
+						member from
+						<DateTime date="2023-09-07" /> to <DateTime date="2023-10-02" />.
+					</dd>
+
+					<dt>Associate Justice</dt>
+					<dd><DateTime date="2023-01-13" /> to present.</dd>
+
+					<dt>General of the South Pacific Special Forces</dt>
+					<dd><DateTime date="2023-03-14" /> to present.</dd>
+
+					<dt>Commander of the South Pacific Special Forces</dt>
+					<dd>
+						<DateTime date="2022-11-12" /> to present. Joined in <DateTime
+							date="2022-01-11"
+						/>. Previously a Trainee until <DateTime date="2022-01-28" />, a
+						Soldier from
+						<DateTime date="2022-01-28" /> to <DateTime date="2022-04-01" />,
+						and an Officer from
+						<DateTime date="2022-04-01" /> to <DateTime date="2022-11-12" />.
+					</dd>
+				</dl>
+			</p>
+			<h3>Roleplay</h3>
+			<p>
+				I’m a roleplayer in the modern-tech Pacifica canon on the South Pacific
+				forums, where I roleplay as Esfalsa and the Central Bailtemmic Republic.
+				You’ll also occasionally find me editing the regioanl map or
+				contributing to articles on TSPedia, the regional wiki.
+			</p>
+		</section>
+		<section>
+			<h2>See Also</h2>
+			<ul>
+				<li><Link href="/code">code</Link></li>
+				<li><Link href="/posts">posts</Link></li>
+			</ul>
+		</section>
+	</article>
+</Layout>

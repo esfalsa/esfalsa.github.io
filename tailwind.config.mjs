@@ -27,7 +27,7 @@ export default {
 			typography: ({ theme }) => ({
 				DEFAULT: {
 					css: {
-						"--tw-prose-invert-headings": theme("colors.brand.400"),
+						"--tw-prose-invert-headings": theme("colors.brand.200"),
 					},
 				},
 			}),

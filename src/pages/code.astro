@@ -1,0 +1,85 @@
+---
+import CodeProject from "../components/CodeProject.astro";
+import Link from "../components/Link.astro";
+import Layout from "../layouts/Layout.astro";
+
+const projects: Parameters<typeof CodeProject>[0][] = [
+	{
+		href: "https://github.com/esfalsa/srsglass",
+		title: "srsglass",
+		description: "command-line timesheet generator",
+		technologies: ["Rust"],
+	},
+	{
+		href: "https://github.com/esfalsa/puree",
+		title: "Purée",
+		description: "find and list tagged regions",
+		technologies: ["Python", "JavaScript", "Jekyll"],
+	},
+	{
+		href: "https://github.com/esfalsa/pallets",
+		title: "pallets",
+		description: "data dump download manager",
+		technologies: ["Rust"],
+	},
+	{
+		href: "https://github.com/esfalsa/esfalsa.github.io",
+		title: "esfalsa.github.io",
+		description: "personal website",
+		technologies: ["TypeScript", "Astro"],
+	},
+	{
+		href: "https://github.com/esfalsa/crisscross",
+		title: "CrissCross",
+		description: "cross-endorsement tool",
+		technologies: ["TypeScript", "React", "Vite"],
+	},
+	{
+		href: "https://github.com/esfalsa/founding-rates",
+		title: "founding-rates",
+		description: "nation founding statistics",
+		technologies: ["TypeScript", "React", "Next.js"],
+	},
+];
+---
+
+<Layout>
+	<article class="prose prose-invert pt-8">
+		<h1>Projects</h1>
+
+		<section>
+			<h2>Featured projects</h2>
+			<div class="not-prose -mx-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+				{projects.map((project) => <CodeProject {...project} />)}
+			</div>
+		</section>
+
+		<section>
+			<h2>Tech stack</h2>
+			<p>
+				I typically develop for the web with
+				<Link href="https://www.typescriptlang.org/">TypeScript</Link>, mostly
+				with <Link href="https://react.dev/">React</Link>, but sometimes with
+				<Link href="https://svelte.dev/">Svelte</Link> as well. You'll also find
+				me working with <Link href="https://www.rust-lang.org/">Rust</Link>, and
+				occasionally <Link href="https://www.python.org/">Python</Link> or
+				<Link href="https://www.ruby-lang.org/">Ruby</Link>.
+			</p>
+		</section>
+
+		<section>
+			<h2>Looking for more?</h2>
+			<p>
+				You can find more of my projects on my <Link
+					href="https://github.com/esfalsa"
+				>
+					GitHub profile
+				</Link> or view <Link
+					href="https://github.com/search?type=repositories&q=user%3Aesfalsa&s=stars&o=desc"
+				>
+					all my projects, sorted by stars
+				</Link>.
+			</p>
+		</section>
+	</article>
+</Layout>

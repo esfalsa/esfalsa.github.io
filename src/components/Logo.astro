@@ -1,8 +1,9 @@
 ---
 interface Props {
 	class?: string;
+	glow?: boolean;
 }
-const { class: className } = Astro.props;
+const { class: className, glow = true } = Astro.props;
 ---
 
 <svg
@@ -11,12 +12,29 @@ const { class: className } = Astro.props;
 	viewBox="0 0 150 150"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
-	class:list={className}
+	class:list={[className, "overflow-visible"]}
 >
-	<rect y="100" width="50" height="50" fill="#565EF0"></rect>
-	<path
-		fill-rule="evenodd"
-		clip-rule="evenodd"
-		d="M100 100C127.614 100 150 77.6142 150 50C150 22.3858 127.614 0 100 0C72.3858 0 50 22.3858 50 50V100H100Z"
-		fill="white"></path>
+	{
+		glow && (
+			<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+				<feMerge>
+					<feMergeNode in="blur" />
+					<feMergeNode in="SourceGraphic" />
+				</feMerge>
+			</filter>
+		)
+	}
+	<rect
+		y="100"
+		width="50"
+		height="50"
+		fill="#565ef0"
+		filter={glow ? "url(#glow)" : undefined}
+	>
+	</rect>
+	<g fill="#fff" filter={glow ? "url(#glow)" : undefined}>
+		<circle cx="100" cy="50" r="50"></circle>
+		<rect width="50" height="50" x="50" y="50"></rect>
+	</g>
 </svg>

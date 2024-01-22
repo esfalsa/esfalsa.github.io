@@ -16,16 +16,16 @@ const navLinks = [
 	},
 ];
 
-const active = Astro.url.pathname;
+const active = "/" + (Astro.url.pathname.split("/").findLast(Boolean) || "");
 ---
 
-<div class="sticky top-0 mb-16 w-full">
+<div class="sticky top-0 z-10 mb-16 w-full">
 	<div class="bg-gray-950 px-8">
 		<nav class="mx-auto flex max-w-prose flex-row justify-between py-4">
 			<div>
 				<a href="/">
 					<span class="sr-only">Home</span>
-					<Logo class="h-6 w-6" glow={false} />
+					<Logo class="h-6 w-6" />
 				</a>
 			</div>
 			<div class="space-x-4">

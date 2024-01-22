@@ -1,9 +1,9 @@
 ---
 interface Props {
 	class?: string;
-	glow?: boolean;
+	glowRadius?: number;
 }
-const { class: className, glow = true } = Astro.props;
+const { class: className, glowRadius } = Astro.props;
 ---
 
 <svg
@@ -15,9 +15,13 @@ const { class: className, glow = true } = Astro.props;
 	class:list={[className, "overflow-visible"]}
 >
 	{
-		glow && (
+		glowRadius && (
 			<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-				<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+				<feGaussianBlur
+					in="SourceGraphic"
+					stdDeviation={glowRadius}
+					result="blur"
+				/>
 				<feMerge>
 					<feMergeNode in="blur" />
 					<feMergeNode in="SourceGraphic" />
@@ -25,16 +29,11 @@ const { class: className, glow = true } = Astro.props;
 			</filter>
 		)
 	}
-	<rect
-		y="100"
-		width="50"
-		height="50"
-		fill="#565ef0"
-		filter={glow ? "url(#glow)" : undefined}
-	>
-	</rect>
-	<g fill="#fff" filter={glow ? "url(#glow)" : undefined}>
-		<circle cx="100" cy="50" r="50"></circle>
-		<rect width="50" height="50" x="50" y="50"></rect>
+	<g filter={glowRadius ? "url(#glow)" : undefined}>
+		<rect y="100" width="50" height="50" fill="#565ef0"></rect>
+		<g fill="#fff">
+			<circle cx="100" cy="50" r="50"></circle>
+			<rect width="50" height="50" x="50" y="50"></rect>
+		</g>
 	</g>
 </svg>

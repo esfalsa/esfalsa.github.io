@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
-
 import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,5 +11,19 @@ export default defineConfig({
 		"/blog": "/posts",
 		"/contact": "/man",
 	},
-	integrations: [tailwind()],
+	integrations: [
+		tailwind(),
+		sitemap({
+			customPages: [
+				"https://esfalsa.github.io/puree/",
+				"https://esfalsa.github.io/spyglass-archive/",
+				"https://esfalsa.github.io/crisscross/",
+				"https://esfalsa.github.io/solanum.user.js/",
+				"https://esfalsa.github.io/markdown-nscode-editor/",
+				"https://esfalsa.github.io/founding-rates/",
+				"https://esfalsa.github.io/codico/",
+				"https://esfalsa.github.io/codico/",
+			],
+		}),
+	],
 });

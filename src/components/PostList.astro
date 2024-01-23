@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from "astro:content";
+import DateTime from "./DateTime.astro";
+import Link from "./Link.astro";
+
+interface Props {
+	posts: CollectionEntry<"posts">[];
+}
+
+const { posts } = Astro.props;
+---
+
+<div class="space-y-1">
+	{
+		posts.map((post) => (
+			<div class="flex flex-row items-center justify-between">
+				<Link
+					href={`/posts/${post.slug}`}
+					class="mr-4 min-w-0 overflow-hidden text-ellipsis whitespace-nowrap"
+				>
+					{post.data.title}
+				</Link>
+				<DateTime
+					date={post.data.pubDate}
+					display={{ month: "long", day: "numeric" }}
+					class="shrink-0 text-sm tabular-nums text-gray-300"
+				/>
+			</div>
+		))
+	}
+</div>

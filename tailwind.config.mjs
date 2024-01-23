@@ -31,6 +31,11 @@ export default {
 						"--tw-prose-invert-headings": theme("colors.brand.200"),
 					},
 				},
+				"brand-links": {
+					css: {
+						"--tw-prose-invert-links": theme("colors.brand.400"),
+					},
+				},
 			}),
 		},
 	},

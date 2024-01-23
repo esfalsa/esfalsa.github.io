@@ -1,10 +1,14 @@
 ---
 interface Props {
-	date: string;
+	date: ConstructorParameters<typeof Date>[0];
 	display?: Intl.DateTimeFormatOptions;
+	class?: string;
 }
-const { date: dateString, display = { month: "long", year: "numeric" } } =
-	Astro.props;
+const {
+	date: dateString,
+	display = { month: "long", year: "numeric" },
+	class: className,
+} = Astro.props;
 
 const date = new Date(dateString);
 
@@ -17,4 +21,4 @@ const title = date.toLocaleDateString("en-US", {
 const text = date.toLocaleDateString("en-US", display);
 ---
 
-<time {datetime} {title}>{text}</time>
+<time {datetime} {title} class={className}>{text}</time>

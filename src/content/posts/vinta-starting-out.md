@@ -1,0 +1,14 @@
+---
+title: "Vinta DevBlog: So Many Things"
+pubDate: 2022-09-29T23:43:15-0700
+---
+
+For the past three weeks, I've been working on [Vinta](https://github.com/esfalsa/vinta). It's supposed to be a puppet manager for NationStates. I say it's _supposed_ to be, because the only part of it that technically works is prepping nations, and that doesn't genuinely work because the jump point setting is still locked behind an inaccessible settings page.
+
+Ironically, prepping switchers is pretty much all I wanted when I first started making it. There are great tools out there, like [Swarm](https://github.com/sw33ze/swarm) or honestly just using [Breeze++](https://chrome.google.com/webstore/detail/breeze%20%20/fmidibfpgbmcmnfedlafdfcbmglbckkf) keybinds and a spreadsheet, but I'm a perfectionist who gets bothered by having my dossier on each puppet constantly fill up from chasing. And at first, that was the only feature I really felt like I was missing. Of course, now I can clear my dossiers! But I've also realized that there's a lot more features that would be nice to have.
+
+One of those features that has proven surprisingly time-consuming to implement has been good UI/UX. I even tried creating some UI mockups, but honestly just found myself spending double the time to recreate the same UI design twice. Instead, I guess I'm just going to... wing it. To be honest, I think it's turning out fine so far, although it admittedly does look a bit like every other 'modern' website, because Vinta is built with [Tauri](https://tauri.app/) and basically just uses a native window with nothing but a WebView.
+
+On the bright side, I think I also have the password encryption down — which, to my knowledge, is something a surprising number of other NationStates tools don't do. I don't mean to sound too proud of that, though. Cybersecurity is certainly not trivial to implement, and I'm the last thing from being an expert at it, so I can hardly guarantee that Vinta's encryption has a genuinely secure implementation. It's also just generally unfortunate that requests to the NationStates site for prepping puppets require plaintext passwords. All that being said, however, I just felt it was better to at least attempt to implement _some_ level of data encryption instead of just leaving plaintext passwords on the user's disk.
+
+My next step, after making that settings page actually accessible, is probably to implement some kind of API rate limiter so I can start working on features hitting the NationStates API, like an autologin feature. Knowing myself, however, there's a reasonable chance I'll get distracted and end up working on something else instead. In any case, although it's looking like developing Vinta is going to take a while, I'm still reasonably happy to see it slowly coming along.

@@ -1,0 +1,19 @@
+---
+import { parseDocument } from "htmlparser2";
+import { textContent } from "domutils";
+
+interface Props {
+	maxLength?: number;
+}
+const { maxLength = 400 } = Astro.props;
+
+const html = await Astro.slots.render("default");
+
+let text = textContent(parseDocument(html));
+
+if (text.length > maxLength) {
+	text = text.substring(0, text.substring(0, maxLength).lastIndexOf(" ")) + "…";
+}
+---
+
+<Fragment set:text={text} />

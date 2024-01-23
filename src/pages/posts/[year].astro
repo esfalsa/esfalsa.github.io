@@ -1,0 +1,68 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import DateTime from "../../components/DateTime.astro";
+import Link from "../../components/Link.astro";
+import TruncatedContent from "../../components/TruncatedContent.astro";
+
+export const getStaticPaths = (async () => {
+	const posts = await getCollection("posts");
+	const years = [
+		...new Set(posts.map((post) => post.data.pubDate.getFullYear())),
+	];
+	return years.map((year) => ({
+		params: { year },
+		props: {
+			posts: posts
+				.filter((post) => post.data.pubDate.getFullYear() === year)
+				.sort((a, b) => {
+					return b.data.pubDate.getTime() - a.data.pubDate.getTime();
+				}),
+		},
+	}));
+}) satisfies GetStaticPaths;
+
+const { year } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Layout>
+	<p class="mb-12"><Link href="/posts">← All posts</Link></p>
+
+	<h1 class="mb-8 text-4xl font-extrabold">Posts from {year}</h1>
+	<div class="space-y-4">
+		{
+			posts.map(async (post) => {
+				const { Content } = await post.render();
+				return (
+					<a
+						href={`/posts/${post.slug}`}
+						class="group -mx-4 block overflow-hidden rounded-lg bg-red-500 bg-gradient-to-br from-brand-500 via-violet-500 to-fuchsia-700 shadow-lg shadow-brand-950 transition duration-200 hover:shadow-lg hover:shadow-brand-900"
+					>
+						<div class="h-full w-full bg-gray-800 p-px transition duration-200 hover:bg-opacity-0">
+							<div class="relative h-full w-full rounded-[calc(0.5rem-0.8px)] bg-gray-950 p-4">
+								<div class="mb-2 flex flex-row items-center justify-between">
+									<h2 class="mr-4 text-lg font-bold text-brand-400">
+										{post.data.title}
+									</h2>
+									<p class="shrink-0 text-sm">
+										<DateTime
+											date={post.data.pubDate}
+											display={{ month: "long", day: "numeric" }}
+										/>
+									</p>
+								</div>
+								<p class="text-gray-300">
+									<TruncatedContent>
+										<Content />
+									</TruncatedContent>
+								</p>
+							</div>
+						</div>
+					</a>
+				);
+			})
+		}
+	</div>
+</Layout>

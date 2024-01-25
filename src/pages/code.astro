@@ -1,7 +1,16 @@
 ---
 import CodeProject from "../components/CodeProject.astro";
+import CodeTechnology from "../components/CodeTechnology.astro";
 import Link from "../components/Link.astro";
 import Layout from "../layouts/Layout.astro";
+import TypeScript from "../components/icons/TypeScript.astro";
+import React from "../components/icons/React.astro";
+import Svelte from "../components/icons/Svelte.astro";
+import Rust from "../components/icons/Rust.astro";
+import Ruby from "../components/icons/Ruby.astro";
+import Python from "../components/icons/Python.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import GitHubStar from "../components/icons/GitHubStar.astro";
 
 const projects: Parameters<typeof CodeProject>[0][] = [
 	{
@@ -44,42 +53,64 @@ const projects: Parameters<typeof CodeProject>[0][] = [
 ---
 
 <Layout>
-	<article class="prose prose-invert pt-8">
-		<h1>Projects</h1>
+	<article>
+		<div class="py-8">
+			<h1 class="mb-8 text-5xl font-extrabold">Projects</h1>
+			<p class="mb-8 text-lg">
+				Projects, tools, and experiments that I’ve worked on.
+			</p>
+		</div>
+
+		<div class="-mx-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+			{projects.map((project) => <CodeProject {...project} />)}
+		</div>
 
 		<section>
-			<h2>Featured projects</h2>
-			<div class="not-prose -mx-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-				{projects.map((project) => <CodeProject {...project} />)}
+			<h2 class="mb-8 mt-24 text-3xl font-bold">Tech stack</h2>
+			<div class="-mx-4 grid grid-cols-3 gap-4 sm:grid-cols-6 md:flex-row">
+				<CodeTechnology href="https://www.typescriptlang.org/">
+					<span class="sr-only">TypeScript</span>
+					<TypeScript class="h-full w-full" />
+				</CodeTechnology>
+				<CodeTechnology href="https://react.dev/">
+					<span class="sr-only">React</span>
+					<React class="h-full w-full" />
+				</CodeTechnology>
+				<CodeTechnology href="https://svelte.dev/">
+					<span class="sr-only">Svelte</span>
+					<Svelte class="h-full w-full" />
+				</CodeTechnology>
+				<CodeTechnology href="https://www.rust-lang.org/">
+					<span class="sr-only">Rust</span>
+					<Rust class="h-full w-full" />
+				</CodeTechnology>
+				<CodeTechnology href="https://www.ruby-lang.org/">
+					<span class="sr-only">Ruby</span>
+					<Ruby class="h-full w-full" />
+				</CodeTechnology>
+				<CodeTechnology href="https://www.python.org/">
+					<span class="sr-only">Python</span>
+					<Python class="h-full w-full" />
+				</CodeTechnology>
 			</div>
 		</section>
 
 		<section>
-			<h2>Tech stack</h2>
-			<p>
-				I typically develop for the web with
-				<Link href="https://www.typescriptlang.org/">TypeScript</Link>, mostly
-				with <Link href="https://react.dev/">React</Link>, but sometimes with
-				<Link href="https://svelte.dev/">Svelte</Link> as well. You'll also find
-				me working with <Link href="https://www.rust-lang.org/">Rust</Link>, and
-				occasionally <Link href="https://www.python.org/">Python</Link> or
-				<Link href="https://www.ruby-lang.org/">Ruby</Link>.
-			</p>
-		</section>
-
-		<section>
-			<h2>Looking for more?</h2>
-			<p>
-				You can find more of my projects on my <Link
+			<h2 class="mb-4 mt-24 text-3xl font-bold">Looking for more?</h2>
+			<div class="flex flex-col sm:flex-row sm:space-x-8">
+				<Link
+					class="flex flex-row items-center"
 					href="https://github.com/esfalsa"
 				>
-					GitHub profile
-				</Link> or view <Link
+					<GitHub class="mr-1 h-4 w-4" /> GitHub profile
+				</Link>
+				<Link
+					class="flex flex-row items-center"
 					href="https://github.com/search?type=repositories&q=user%3Aesfalsa&s=stars&o=desc"
 				>
-					all my projects, sorted by stars
-				</Link>.
-			</p>
+					<GitHubStar class="mr-1 h-4 w-4" /> Projects sorted by stars
+				</Link>
+			</div>
 		</section>
 	</article>
 </Layout>

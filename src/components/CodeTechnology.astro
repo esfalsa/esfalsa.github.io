@@ -1,0 +1,23 @@
+---
+export interface Props {
+	href: string;
+}
+const { href } = Astro.props;
+---
+
+<a
+	{href}
+	target="_blank"
+	rel="noopener noreferrer"
+	class="group block aspect-square flex-1 overflow-hidden rounded-lg bg-red-500 bg-gradient-to-br from-brand-500 via-violet-500 to-fuchsia-700 shadow-lg shadow-brand-950 transition duration-200 hover:shadow-lg hover:shadow-brand-900"
+>
+	<div
+		class="h-full w-full bg-gray-800 p-px transition duration-200 hover:bg-opacity-0"
+	>
+		<div
+			class="relative h-full w-full rounded-[calc(0.5rem-0.8px)] bg-gray-950 p-4"
+		>
+			<slot />
+		</div>
+	</div>
+</a>

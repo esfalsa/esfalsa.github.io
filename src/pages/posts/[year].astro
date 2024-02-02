@@ -27,7 +27,7 @@ const { year } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<Layout>
+<Layout title={`${year} posts`}>
 	<p class="mb-12"><Link href="/posts">← All posts</Link></p>
 
 	<h1 class="mb-8 text-4xl font-extrabold">Posts from {year}</h1>

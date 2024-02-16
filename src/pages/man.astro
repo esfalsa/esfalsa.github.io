@@ -25,10 +25,10 @@ import DateTime from "../components/DateTime.astro";
 				>
 					<div class="rounded-[calc(1rem-2px)] bg-gray-950 p-2">
 						<div
-							class="grid grid-cols-[auto,minmax(0,1fr)] grid-rows-3 items-center"
+							class="grid grid-cols-[auto,minmax(0,1fr)] grid-rows-5 items-center"
 						>
 							<div
-								class="col-start-1 row-span-4 row-start-1 self-stretch rounded-lg border border-gray-700 bg-gradient-to-bl from-gray-800/60 to-gray-900/60"
+								class="col-start-1 row-span-5 row-start-1 self-stretch rounded-lg border border-gray-700 bg-gradient-to-bl from-gray-800/60 to-gray-900/60"
 							>
 							</div>
 							<div
@@ -66,12 +66,27 @@ import DateTime from "../components/DateTime.astro";
 								</Link>
 							</div>
 							<div
-								class="col-start-1 row-start-4 mx-px px-4 py-2 text-right font-semibold"
+								class="col-start-1 row-start-4 mx-px border-b border-gray-800 px-4 py-2 text-right font-semibold"
 							>
 								GitHub
 							</div>
-							<div class="col-start-2 row-start-4 py-2 pl-4">
+							<div
+								class="col-start-2 row-start-4 border-b border-dotted border-gray-800 py-2 pl-4"
+							>
 								<Link href="https://github.com/esfalsa">esfalsa</Link>
+							</div>
+							<div
+								class="col-start-1 row-start-5 mx-px px-4 py-2 text-right font-semibold"
+							>
+								PGP
+							</div>
+							<div class="col-start-2 row-start-5 py-2 pl-4">
+								<Link
+									href="https://keys.openpgp.org/search?q=pronoun.nationstates%40gmail.com"
+									class="block overflow-hidden text-ellipsis whitespace-nowrap"
+								>
+									1FA682E7F83A5C222C3F7EE523766F5C46E50317
+								</Link>
 							</div>
 						</div>
 					</div>

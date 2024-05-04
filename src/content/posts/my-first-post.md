@@ -1,6 +1,6 @@
 ---
 title: My First Post
-pubDate: 2022-08-02T19:28:30-0700
+pubDate: 2022-08-02T19:28:30-07:00
 ---
 
 Today, I'm writing my first blog post. And with some luck, someone may actually read it.

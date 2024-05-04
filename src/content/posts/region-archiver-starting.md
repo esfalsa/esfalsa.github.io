@@ -1,6 +1,6 @@
 ---
 title: "Region Archiver DevBlog: A New Region Archiver?"
-pubDate: 2022-12-24T12:45:15-0800
+pubDate: 2022-12-24T12:45:15-08:00
 ---
 
 So. It's been a while.

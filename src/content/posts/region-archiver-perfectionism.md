@@ -1,6 +1,6 @@
 ---
 title: "Region Archiver DevBlog: Well… It’s Working"
-pubDate: 2022-12-27T22:19:30-0800
+pubDate: 2022-12-27T22:19:30-08:00
 ---
 
 It's been another few days and in that time I've made some more progress with my region archiver script. My code actually works now!

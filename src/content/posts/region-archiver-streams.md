@@ -1,6 +1,6 @@
 ---
 title: "Region Archiver DevBlog: If Only It Were That Simple"
-pubDate: 2023-01-08T17:06:11.114-0800
+pubDate: 2023-01-08T17:06:11.114-08:00
 ---
 
 It's a little weird to think that the last time I posted, I was talking about how my code was actually working. Unfortunately, I spoke a little too soon; once I linked it up with actually pulling flags from NationStates, it definitely was not working. This DevBlog won't be so much about reporting progress as reporting future plans, because progress since then has been difficult amid debugging and real-life scheduling.

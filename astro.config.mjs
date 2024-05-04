@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+import { mocha } from "@catppuccin/vscode";
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,6 +11,11 @@ export default defineConfig({
 		"/projects": "/code",
 		"/blog": "/posts",
 		"/contact": "/man",
+	},
+	markdown: {
+		shikiConfig: {
+			theme: mocha,
+		},
 	},
 	integrations: [
 		tailwind(),

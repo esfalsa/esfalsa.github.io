@@ -1,6 +1,6 @@
 ---
 title: "Codico DevBlog: Spreadsheets?"
-pubDate: 2022-08-03T22:02:10-0700
+pubDate: 2022-08-03T22:02:10-07:00
 ---
 
 For the past few days, I've been working on a new project called [Codico](https://github.com/esfalsa/codico). My goal is to create a simple way to write and publish dispatches, and keep them all up to date with any new content changes. But today, that led me to a strange place: making a spreadsheet template.

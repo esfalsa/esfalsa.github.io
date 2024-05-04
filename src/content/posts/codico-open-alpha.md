@@ -1,6 +1,6 @@
 ---
 title: "Codico DevBlog: Open Alpha"
-pubDate: 2022-08-07T00:03:25-0700
+pubDate: 2022-08-07T00:03:25-07:00
 ---
 
 So, it's been a few days since my last Codico DevBlog. Yesterday, I released [Codico](https://github.com/esfalsa/codico) into open alpha. Parts of the interface remain clunky, and others have bugs I'm aware of (not to mention the ones I haven't learned of yet), but it has enough functionality that I'm generally satisfied enough to call it a release.

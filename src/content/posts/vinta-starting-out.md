@@ -1,6 +1,6 @@
 ---
 title: "Vinta DevBlog: So Many Things"
-pubDate: 2022-09-29T23:43:15-0700
+pubDate: 2022-09-29T23:43:15-07:00
 ---
 
 For the past three weeks, I've been working on [Vinta](https://github.com/esfalsa/vinta). It's supposed to be a puppet manager for NationStates. I say it's _supposed_ to be, because the only part of it that technically works is prepping nations, and that doesn't genuinely work because the jump point setting is still locked behind an inaccessible settings page.

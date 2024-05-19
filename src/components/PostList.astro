@@ -23,7 +23,12 @@ const { posts } = Astro.props;
 				<DateTime
 					date={post.data.pubDate}
 					display={{ month: "long", day: "numeric" }}
-					class="shrink-0 text-sm tabular-nums text-gray-300"
+					class="hidden shrink-0 text-sm tabular-nums text-gray-300 sm:block"
+				/>
+				<DateTime
+					date={post.data.pubDate}
+					display={{ month: "short", day: "numeric" }}
+					class="shrink-0 text-sm tabular-nums text-gray-300 sm:hidden"
 				/>
 			</div>
 		))

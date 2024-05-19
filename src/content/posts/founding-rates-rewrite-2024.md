@@ -1,0 +1,18 @@
+---
+title: "All-New (but Mostly the Same) Founding Statistics"
+pubDate: 2024-05-19T08:50:56.423Z
+---
+
+Around a year ago, soon after frontiers were introduced into NationStates, I threw together a quick website to show the number of foundings that each region had received in the past week (which is as far back as happenings are available). It kind of sucked -- the table of data was not only ugly, but also never worked on mobile because it was just too wide. And no, you could not zoom out, and no, you could not scroll horizontally. Fortunately, people seemed to like it and find it useful anyway. Unfortunately, I've had to deal with the consequences of my terrible code ever since.
+
+For one, the automated daily updates were flaky. I suppose ten failures over more than 365 days could be worse, but getting an email every time got a bit annoying.
+
+Worse, the setup was genuinely painful to develop. There's no easy way to access founding statistics across regions, so the best option is just to retrieve data from the NationStates API, one request at a time, and covering the past week can take over a hundred requests. The dev server was practically unusable because even if I just wanted to tweak the styling a bit, each page refresh would take at least a minute, fetching all the available happenings again. I think I initially assumed Next.js data caching would save me here, but then I ended up just fetched happenings working backwards from the current time, for reasons that escape me now, which means that because the inputs depended on the current time, they were constantly changing so the caching didn't really help.
+
+Another casualty of my laziness was the XML parser I used. I just used jsdom, a JavaScript implementation of the DOM standard, because I could just use the same APIs I was familiar with in the browser to query the XML data from the API. I think it's probably not slow given what it's doing (as in, implementing the entire standard) but it was definitely a lazy route when I was just processing some XML, and that also definitely showed in the performance.
+
+Looking back now, the choice to rely on the Next.js data cache is also weird because the site is updated with a GitHub Action that runs once a day and it's not like the cache would be persisted between runs. Honestly, I think I just wanted to try out the Next.js app router at the time.
+
+So, eventually, I threw in the towel and just rewrote the entire site. I could have improved the previous version, but it just felt cleaner to start over given that I think almost everything substantial would have to be rewritten anyway. I ended up just writing the caching logic myself, both storing happenings from past days on-disk to persist between builds, and storing all happenings in memory after the initial fetch so that they'd only be retrieved once during each build or, more importantly for fixing the styling, only once on the initial request to the dev server, meaning subsequent updates would be near-instant. Seriously, I would not be able to get that table styling to come out okay if every page load took over a minute. But I'm happy to report that you can now actually scroll horizontally on mobile to view all the table columns. And there are some other improvements here and there, like tabular numbers, or ensuring the sparklines are all actually the same width.
+
+The new site is available at the same URL, [here](https://esfalsa.github.io/founding-rates/). Feel free to let me know what you think! If you're interested, the code is all open-source (under the AGPL-3.0 license) and available [on GitHub](https://github.com/esfalsa/founding-rates).

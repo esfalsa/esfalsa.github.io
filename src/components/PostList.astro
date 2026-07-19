@@ -15,7 +15,7 @@ const { posts } = Astro.props;
 		posts.map((post) => (
 			<div class="flex flex-row items-center justify-between">
 				<Link
-					href={`/posts/${post.slug}`}
+					href={`/posts/${post.id}`}
 					class="mr-4 min-w-0 overflow-hidden text-ellipsis whitespace-nowrap"
 				>
 					{post.data.title}

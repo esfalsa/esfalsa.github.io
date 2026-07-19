@@ -19,7 +19,7 @@ export const GET: APIRoute = async (context) => {
 			posts.map(async (post) => ({
 				title: post.data.title,
 				pubDate: post.data.pubDate,
-				link: `/posts/${post.slug}/`,
+				link: `/posts/${post.id}/`,
 				content: (
 					await unified()
 						.use(remarkSmartypants)
